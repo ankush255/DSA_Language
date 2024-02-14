@@ -43,3 +43,17 @@ int main()
 
     return  0;
 }
+
+/*
+
+41      17      34      0       19      24      28      8       12      14
+Enter The Search Value : 8
+Your Array Is [7]
+
+
+
+41      17      34      0       19      24      28      8       12      14
+Enter The Search Value : 2
+Not in This Array
+
+*/
