@@ -15,21 +15,31 @@ int value()
 
 int linerSearch(int ser)
 {
+    printf("\nEnter The Search Value : ");
+    scanf("%d",&ser);
+
     for(i=0 ; i<n ; i++)
     {
         if(a[i] == ser)
         {
-            printf("Array Position is %d\n",a[i]);
-        }else{
-            printf("\nYour Array is Not Right\n");
+            return i;
         }
     }
+    return -1;
 }
 
 int main()
 {
     value();
-    linerSearch(19);
+    
+    int a = linerSearch(0);
+
+    if( a == -1)
+    {
+        printf("Not in This Array");
+    }else{
+        printf("Your Array Is [%d]",a);
+    }
 
     return  0;
 }
