@@ -15,7 +15,7 @@ int value()
 
 int linerSearch(int ser)
 {
-    printf("\nEnter The Search Value : ");
+    printf("\nEnter Search Value : ");
     scanf("%d",&ser);
 
     for(i=0 ; i<n ; i++)
