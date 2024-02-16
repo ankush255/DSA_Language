@@ -6,7 +6,6 @@ int i, mid, min, max,x,n, result;
 
 int value()
 {
-
     for(i=0 ; i<10 ; i++)
     {
         printf("%d\t",a[i]); 
