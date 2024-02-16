@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int a[10] = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
-int i, min=0, max=9, x, n, result;
+int i, min=0, max=9,  n, result;
 
 int value()
 {
@@ -40,9 +40,9 @@ int main()
     value();
 
     printf("\n\nEnter value : ");
-    scanf("%d", &x);
+    scanf("%d", &n);
 
-    result = binarySerch(x, min,max);
+    result = binarySerch(n, min,max);
 
     if (result != -1)
     {
