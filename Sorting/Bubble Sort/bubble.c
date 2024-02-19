@@ -16,8 +16,8 @@ int value()
 
 int bubble_sort()
 {
-    
-    for(j =0 ; j < n-1 ; j++)
+
+    for(j =0 ; j < n ; j++)
     {
         for (i = 0; i < n-j-1; i++)
         {
