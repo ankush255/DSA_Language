@@ -14,7 +14,7 @@ int value()
 }
 
 
-int bubble_sort()
+int selection_sort()
 {
 
     for(i =0 ; i < n-1 ; i++)
@@ -41,7 +41,7 @@ int bubble_sort()
 int main()
 {
     value();
-    bubble_sort();
+    selection_sort();
 
     for (i = 0; i < n; i++)
     {
