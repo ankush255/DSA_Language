@@ -1,14 +1,14 @@
 #include<stdio.h>
 #include<conio.h>
-#define max 5
+#define n 5
 
-int q[max] , front = -1 , rear = -1;
+int q[n] , front = -1 , rear = -1;
 
 void insert()
 {
     int data;
 
-    if(rear == max-1)
+    if(rear == n-1)
     {
         printf("Overflow");
     }else{
