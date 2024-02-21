@@ -52,6 +52,8 @@ void disp()
     }
 }
 
+void exit();
+
 
 
 int main()
