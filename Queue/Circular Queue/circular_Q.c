@@ -79,14 +79,19 @@ int main() {
                 printf("\n");
                 enter(value);
                 break;
+
             case 2:
                 printf("Delete Element: %d\n\n", delete());
                 break;
+
             case 3:
                 display();
                 break;
+
             case 4:
                 exit(0);
+                break;
+                
             default:
                 printf("Invalid choice\n");
         }
