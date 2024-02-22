@@ -2,7 +2,7 @@
 #include <conio.h>
 #define n 5
 
-int queue[n];
+int q[n];
 int front = -1, rear = -1;
 
 void enter(int value) 
@@ -18,7 +18,7 @@ void enter(int value)
             {
                 rear = (rear + 1) % n;
             }
-    queue[rear] = value;
+    q[rear] = value;
 }
 
 int delete() 
@@ -30,11 +30,11 @@ int delete()
         return -1;
     } else if (front == rear) 
         {
-            item = queue[front];
+            item = q[front];
             front = rear = -1;
         } else 
             {
-                item = queue[front];
+                item = q[front];
                 front = (front + 1) % n;
             }
     return item;
@@ -52,9 +52,9 @@ void display() {
 
     for (i = front; i != rear; i = (i + 1) % n) 
     {
-        printf("%d ", queue[i]);
+        printf("%d ", q[i]);
     }
-    printf("%d\n\n", queue[i]);
+    printf("%d\n\n", q[i]);
 }
 
 void exit();
