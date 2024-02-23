@@ -11,19 +11,20 @@ void insertFront(int item)
     {
         printf("Overflow");
     }
-
-    if(front == -1)
-    {
-        front = rear = 0;
-    }else if(front == 0)
+    else
         {
-            front = n-1;
-        }else
+            if(front == -1)
             {
-
-                front --;
-            }
-                q[front] = item;
+                front = rear = 0;
+            }else if(front == 0)
+                {
+                    front = n-1;
+                }else
+                    {
+                        front --;
+                    }
+        q[front] = item;
+    }
 
                 
 
@@ -43,16 +44,13 @@ void insertrear(int data)
             {
                 front = rear = 0;
             }else if(rear == n-1)
-            {
-                rear =0;
-            }else{
-
-                rear++;
-            }
-                q[rear] = data;
-
-                
-
+                {
+                    rear =0;
+                }else
+                    {
+                        rear++;
+                    }
+            q[rear] = data;
         }
 }
 
@@ -172,79 +170,72 @@ int main()
 
 /*
 
-1. Insert
-2. Delete
-3. Display
-4. Exit
+1. Insert Front
+2. Insert Rear
+3. Delete Front
+4. Delete Rear
+5. Display
+6. Exit
+
+Enter Choice : 1
+Enter Front : 10
+
+
+Enter Choice : 1
+Enter Front : 20
+
 
 Enter Choice : 2
-Underflow
+Enter Rear : 30
 
-Enter Choice : 3
-Queue is Empty
-
-Enter Choice : 1
-Enter Element : 10
-
-
-Enter Choice : 1
-Enter Element : 20
-
-
-Enter Choice : 1
-Enter Element : 30
-
-
-Enter Choice : 1
-Enter Element : 40
-
-
-Enter Choice : 3
-Elements :
-10
-20
-30
-40
-
-Enter Choice : 1
-Enter Element : 50
-
-
-Enter Choice : 1
-Overflow
-
-Enter Choice : 3
-Elements :
-10
-20
-30
-40
-50
 
 Enter Choice : 2
-Delete : 10
+Enter Rear : 40
 
-Enter Choice : 3
-Elements :
-20
-30
-40
-50
 
 Enter Choice : 2
-Delete : 20
+Enter Rear : 50
 
-Enter Choice : 2
-Delete : 30
+
+Enter Choice : 5
+Elements :      20      10      30      40      50
 
 Enter Choice : 3
-Elements :
-40
-50
 
-Enter Choice : 1
-Overflow
 
 Enter Choice : 4
+Delete Rear : 50
 
+Enter Choice : 5
+Elements :      10      30      40
+
+Enter Choice : 1
+Enter Front : 50
+
+
+Enter Choice : 5
+Elements :      50      10      30      40
+
+Enter Choice : 2
+Enter Rear : 60
+
+
+Enter Choice : 5
+Elements :      50      10      30      40      60
+
+Enter Choice : 2
+Enter Rear : 70
+Overflow
+
+Enter Choice : 5
+Elements :      50      10      30      40      60
+
+Enter Choice : 1
+Enter Front : 80
+Overflow
+
+Enter Choice : 5
+Elements :      50      10      30      40      60
+
+Enter Choice : 6
 */
