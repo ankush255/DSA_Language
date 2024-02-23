@@ -4,11 +4,10 @@
 
 int q[n], front = -1, rear = -1;
 
-void insertFront()
+void insertFront(int item)
 {
-    int item;
 
-    if(front == 0)
+    if(front == 0 && rear == n-1 || front == rear +1)
     {
         printf("Overflow");
     }
@@ -21,20 +20,20 @@ void insertFront()
             front = n-1;
         }else
             {
-                printf("Enter Front : ");
-                scanf("%d",&item);
 
                 front --;
-                q[front] = item;
             }
+                q[front] = item;
+
+                
+
 }
 
 
-void insertrear()
+void insertrear(int data)
 {
-    int data;
 
-    if (rear == n - 1)
+    if(front == 0 && rear == n-1 || front == rear +1)
     {
         printf("Overflow");
     }
@@ -42,34 +41,46 @@ void insertrear()
         {
             if (front == -1)
             {
-                front = 0;
-            }
-                printf("Enter Rear : ");
-                scanf("%d", &data);
+                front = rear = 0;
+            }else if(rear == n-1)
+            {
+                rear =0;
+            }else{
 
                 rear++;
+            }
                 q[rear] = data;
+
+                
+
         }
 }
 
 void deletefront()
 {
-    if (front == -1 || front > rear)
+    if (front == -1 )
     {
         printf("Underflow");
     }
-    else
+     
+        if( front == rear)
         {
-            printf("Delete Front : %d ", q[front]);
-            front++;
-        }
+            front = rear = -1;
+        }else if(front == n - 1)
+                {
+                    front = 0;
+                }else
+                    {
+                        printf("Delete Front : %d ", q[front]);
+                        front++;
+                    }
 }
 
 void deleterear()
 {
     int item;
 
-    if(rear == -1 )
+    if(front == -1 )
     {
         printf("Underflow");
     }
@@ -109,7 +120,7 @@ void exit();
 
 int main()
 {
-    int choic;
+    int choic,item,data;
     printf("\n1. Insert Front");
     printf("\n2. Insert Rear");
     printf("\n3. Delete Front");
@@ -125,11 +136,15 @@ int main()
         switch (choic)
         {
             case 1:
-                insertFront();
+                printf("Enter Front : ");
+                scanf("%d",&item);
+                insertFront(item);
                 break;
 
             case 2:
-                insertrear();
+                printf("Enter Rear : ");
+                scanf("%d", &data);
+                insertrear(data);
                 break;
 
             case 3:
