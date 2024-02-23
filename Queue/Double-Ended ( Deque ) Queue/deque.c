@@ -201,7 +201,7 @@ Enter Choice : 5
 Elements :      20      10      30      40      50
 
 Enter Choice : 3
-
+Delete Front : 20
 
 Enter Choice : 4
 Delete Rear : 50
