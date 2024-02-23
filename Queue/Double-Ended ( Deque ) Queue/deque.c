@@ -79,8 +79,6 @@ void deletefront()
 
 void deleterear()
 {
-    int item;
-
     if(front == -1 )
     {
         printf("Underflow");
