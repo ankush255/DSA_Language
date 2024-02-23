@@ -60,18 +60,21 @@ void deletefront()
     {
         printf("Underflow");
     }
-     
-        if( front == rear)
+    else
         {
-            front = rear = -1;
-        }else if(front == n - 1)
-                {
-                    front = 0;
-                }else
+     
+            if( front == rear)
+            {
+                front = rear = -1;
+            }else if(front == n - 1)
                     {
-                        printf("Delete Front : %d ", q[front]);
-                        front++;
-                    }
+                        front = 0;
+                    }else
+                        {
+                            printf("Delete Front : %d ", q[front]);
+                            front++;
+                        }
+        }
 }
 
 void deleterear()
@@ -82,18 +85,20 @@ void deleterear()
     {
         printf("Underflow");
     }
-
-    if(front == rear)
-    {
-        front = rear = -1;
-    }else if(rear == 0)
+    else
         {
-            rear = n -1;
-        }else
+            if(front == rear)
             {
-                printf("Delete Rear : %d ", q[rear]);
-                rear --;
-            }
+                front = rear = -1;
+            }else if(rear == 0)
+                {
+                    rear = n -1;
+                }else
+                    {
+                        printf("Delete Rear : %d ", q[rear]);
+                        rear --;
+                    }
+        }
 }
 
 void disp()
