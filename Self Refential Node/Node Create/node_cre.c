@@ -1,4 +1,4 @@
-// Self Fefential Node
+// Self Refential Node
 
 #include<stdio.h>
 struct node{
