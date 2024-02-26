@@ -13,16 +13,16 @@ int main()
     a.ch = 'A';
     a.ptr = NULL;
 
-    // printf("Data of a is : %d\n",a.data);     // Data of a is : 65
-    // printf("Char of a is : %c\n\n",a.ch);     // Char of a is : A
+    // printf("Data of A is : %d\n",a.data);     // Data of A is : 65
+    // printf("Char of A is : %c\n\n",a.ch);     // Char of A is : A
     
 
     b.data = 97;
     b.ch = 'a';
     b.ptr = NULL;
 
-    // printf("Data of b is : %d\n",b.data);     // Data of b is : 97
-    // printf("Char of b is : %c\n\n",b.ch);     // Char of b is : a
+    // printf("Data of B is : %d\n",b.data);     // Data of B is : 97
+    // printf("Char of B is : %c\n\n",b.ch);     // Char of B is : a
 
 
 
@@ -30,8 +30,8 @@ int main()
     c.ch = 'Z';
     c.ptr = NULL;
 
-    // printf("Data of c is : %d\n",c.data);     // Data of c is : 90
-    // printf("Char of c is : %c\n\n",c.ch);     // Char of c is : Z
+    // printf("Data of C is : %d\n",c.data);     // Data of C is : 90
+    // printf("Char of C is : %c\n\n",c.ch);     // Char of C is : Z
 
 
 
@@ -39,8 +39,8 @@ int main()
     d.ch = 'z';
     d.ptr = NULL;
 
-    // printf("Data of d is : %d\n",d.data);     // Data of d is : 122
-    // printf("Char of d is : %c\n\n",d.ch);     // Char of d is : z
+    // printf("Data of D is : %d\n",d.data);     // Data of D is : 122
+    // printf("Char of D is : %c\n\n",d.ch);     // Char of D is : z
 
 
 
