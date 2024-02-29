@@ -29,7 +29,7 @@ void insertEnd(int val)
     if (temp == NULL) 
     {
         printf("List is Empty....\n");
-        exit(1);
+        return;
     }
 
     temp->data = val;
