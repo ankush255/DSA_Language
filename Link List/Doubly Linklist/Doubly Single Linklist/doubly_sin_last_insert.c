@@ -15,7 +15,7 @@ void insertEnd(int val)
     if (temp == NULL) 
     {
         printf("Memory allocation failed.\n");
-        exit(1);
+        return;
     }
 
     temp->data = val;
@@ -34,7 +34,7 @@ void insertEnd(int val)
             ptr = ptr->next;
         }
         ptr->next = temp;
-        temp->prev = ptr; // Set the previous node
+        temp->prev = ptr; 
     }
 }
 
@@ -52,14 +52,14 @@ void display()
         printf("List is Empty ...\n");
     } 
     else 
-    {
-        while (ptr != NULL) 
         {
-            printf("%d\t", ptr->data);
-            ptr = ptr->next;
+            while (ptr != NULL) 
+            {
+                printf("%d\t", ptr->data);
+                ptr = ptr->next;
+            }
+            printf("\n");
         }
-        printf("\n");
-    }
 }
 
 int main() 
@@ -99,3 +99,30 @@ int main()
 
     return 0;
 }
+
+
+/*
+
+1. Insert Last Element
+2. Display
+3. Exit
+
+Enter your choice: 1
+Enter last Element : 100
+
+Enter your choice: 1
+Enter last Element : 200
+
+Enter your choice: 1
+Enter last Element : 300
+
+Enter your choice: 1
+Enter last Element : 400
+
+Enter your choice: 2
+100     200     300     400
+
+Enter your choice: 3
+Exiting program...
+
+*/

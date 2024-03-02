@@ -14,7 +14,7 @@ void insertEnd(int val)
     if (temp == NULL) 
     {
         printf("Memory allocation failed.\n");
-        exit(1);
+        return;
     }
 
     temp->data = val;
@@ -23,7 +23,7 @@ void insertEnd(int val)
     if (head == NULL) 
     {
         head = temp;
-        head->next = head; // Point to itself to make it circular
+        head->next = head; 
     } 
     else 
     {
@@ -33,7 +33,7 @@ void insertEnd(int val)
             ptr = ptr->next;
         }
         ptr->next = temp;
-        temp->next = head; // Make the last node point back to head to complete the circular linking
+        temp->next = head; 
     }
 }
 
@@ -49,7 +49,7 @@ void deleteLast()
         printf("List is already empty.\n");
         return;
     } 
-    else if (head->next == head) // Only one node
+    else if (head->next == head) 
     {
         free(head);
         head = NULL;
@@ -58,12 +58,12 @@ void deleteLast()
     }
 
     struct node *ptr = head;
-    while (ptr->next->next != head) // Traverse until the second last node
+    while (ptr->next->next != head) 
     {
         ptr = ptr->next;
     }
-    free(ptr->next); // Free the last node
-    ptr->next = head; // Update the next pointer of the second last node to point to head
+    free(ptr->next); 
+    ptr->next = head; 
     printf("Deleted last node.\n");
 }
 
@@ -128,3 +128,37 @@ int main()
 
     return 0;
 }
+
+
+/*
+
+1. Insert Last Element
+2. Delete Last Element
+3. Display
+4. Exit
+
+Enter your choice: 1
+Enter Element : 100
+
+Enter your choice: 1
+Enter Element : 200
+
+Enter your choice: 1
+Enter Element : 300
+
+Enter your choice: 1
+Enter Element : 400
+
+Enter your choice: 3
+100     200     300     400
+
+Enter your choice: 2
+Deleted last node.
+
+Enter your choice: 3
+100     200     300
+
+Enter your choice: 4
+Exiting program.
+
+*/

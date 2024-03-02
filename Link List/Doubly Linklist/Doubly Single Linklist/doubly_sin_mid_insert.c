@@ -46,6 +46,7 @@ void insertAtMid(int val, int position)
     }
 
     struct node *current = head;
+
     for (int i = 1; i < position && current != NULL; i++) 
     {
         current = current->next;
@@ -59,6 +60,7 @@ void insertAtMid(int val, int position)
 
     temp->next = current;
     temp->prev = current->prev;
+
     if (current->prev != NULL) 
     {
         current->prev->next = temp;
@@ -80,13 +82,13 @@ void display()
         printf("List is Empty ...\n");
     } 
     else 
-    {
-        while(ptr != NULL) 
         {
-            printf("%d\t", ptr->data);
-            ptr = ptr->next;
+            while(ptr != NULL) 
+            {
+                printf("%d\t", ptr->data);
+                ptr = ptr->next;
+            }
         }
-    }
     printf("\n");
 }
 
@@ -138,3 +140,49 @@ int main()
 
     return 0;
 }
+
+
+
+/*
+
+1. Enter Element
+2. Insert at Middle
+3. Display
+4. Exit
+
+Enter your choice: 1
+Enter Element : 100
+
+Enter your choice: 1
+Enter Element : 200
+
+Enter your choice: 1
+Enter Element : 300
+
+Enter your choice: 1
+Enter Element : 400
+
+Enter your choice: 1
+Enter Element : 500
+
+Enter your choice: 3
+100     200     300     400     500
+
+Enter your choice: 2
+Enter Middle Element : 1001
+Enter Middle Element Position : 3
+
+Enter your choice: 3
+100     200     1001    300     400     500
+
+Enter your choice: 2
+Enter Middle Element : 2002
+Enter Middle Element Position : 5
+
+Enter your choice: 3
+100     200     1001    300     2002    400     500
+
+Enter your choice: 4
+Exiting program.
+
+*/

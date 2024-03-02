@@ -18,7 +18,7 @@ void insertEnd(int val)
     if(head == NULL) 
     {
         head = temp;
-        head->next = head; // Point to itself to make it circular
+        head->next = head; 
         return;
     }
 
@@ -28,7 +28,7 @@ void insertEnd(int val)
         ptr = ptr->next;
     }
     ptr->next = temp;
-    temp->next = head; // Make the last node point back to head to complete the circular linking
+    temp->next = head; 
 }
 
 void insertAtMid(int val, int position) 
@@ -39,7 +39,7 @@ void insertAtMid(int val, int position)
     if (head == NULL) 
     {
         head = temp;
-        head->next = head; // Point to itself to make it circular
+        head->next = head; 
         return;
     }
 
@@ -122,3 +122,41 @@ int main()
 
     return 0;
 }
+
+
+/*
+
+1. Enter Element 
+2. Insert at Middle 
+3. Display 
+4. Exit 
+
+Enter your choice: 1
+Enter Element : 100
+
+Enter your choice: 1
+Enter Element : 200
+
+Enter your choice: 1
+Enter Element : 300
+
+Enter your choice: 1
+Enter Element : 400
+
+Enter your choice: 1
+Enter Element : 500
+
+Enter your choice: 3
+100     200     300     400     500
+
+Enter your choice: 2
+Enter Middle Element : 1001
+Enter Middle Element Position : 3
+
+Enter your choice: 3
+100     200     1001    300     400     500
+
+Enter your choice: 4
+Exiting program.
+
+*/

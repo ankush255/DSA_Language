@@ -4,7 +4,7 @@
 struct node {
     int data;
     struct node *next;
-    struct node *prev; // New member to store previous node
+    struct node *prev; 
 };
 
 struct node *head = NULL;
@@ -20,7 +20,7 @@ void insertEnd(int val)
 
     temp->data = val;
     temp->next = NULL;
-    temp->prev = NULL; // Set prev to NULL for the new node
+    temp->prev = NULL; 
 
     if (head == NULL) 
     {
@@ -34,7 +34,7 @@ void insertEnd(int val)
             ptr = ptr->next;
         }
         ptr->next = temp;
-        temp->prev = ptr; // Update the previous node pointer
+        temp->prev = ptr; 
     }
 }
 
@@ -77,13 +77,13 @@ void display()
         printf("List is Empty ...");
     } 
     else 
-    {
-        while (ptr != NULL) 
         {
-            printf("%d\t", ptr->data);
-            ptr = ptr->next;
+            while (ptr != NULL) 
+            {
+                printf("%d\t", ptr->data);
+                ptr = ptr->next;
+            }
         }
-    }
     printf("\n");
 }
 
@@ -130,3 +130,46 @@ int main()
 
     return 0;
 }
+
+
+/*
+
+1. Insert Last Element
+2. Delete Last Element
+3. Display
+4. Exit
+
+Enter your choice: 1
+Enter Element : 100
+
+Enter your choice: 1
+Enter Element : 200
+
+Enter your choice: 1
+Enter Element : 300
+
+Enter your choice: 1
+Enter Element : 400
+
+Enter your choice: 1
+Enter Element : 500
+
+Enter your choice: 3
+100     200     300     400     500
+
+Enter your choice: 2
+Deleted last node.
+
+Enter your choice: 3
+100     200     300     400
+
+Enter your choice: 2
+Deleted last node.
+
+Enter your choice: 3
+100     200     300
+
+Enter your choice: 4
+Exiting program.
+
+*/

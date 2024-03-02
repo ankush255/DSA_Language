@@ -4,7 +4,7 @@
 struct node {
     int data;
     struct node *next;
-    struct node *prev; // New pointer for previous node
+    struct node *prev; 
 };
 
 struct node *head = NULL;
@@ -15,7 +15,7 @@ void insertEnd(int val)
     if (temp == NULL) 
     {
         printf("Memory allocation failed\n");
-        exit(1);
+        return;
     }
 
     temp->data = val;
@@ -25,16 +25,16 @@ void insertEnd(int val)
     if (head == NULL) 
     {
         head = temp;
-        head->next = head; // Point to itself to make it circular
-        head->prev = head; // Previous pointer also points to itself
+        head->next = head; 
+        head->prev = head; 
         return;
     }
 
-    struct node *last = head->prev; // Get the last node
+    struct node *last = head->prev; 
     last->next = temp;
     temp->prev = last;
-    temp->next = head; // Make the new node point back to head
-    head->prev = temp; // Update head's previous pointer
+    temp->next = head; 
+    head->prev = temp; 
 }
 
 void insertAtMid(int val, int position) 
@@ -43,7 +43,7 @@ void insertAtMid(int val, int position)
     if (temp == NULL) 
     {
         printf("Memory allocation failed\n");
-        exit(1);
+        return;
     }
 
     temp->data = val;
@@ -53,8 +53,8 @@ void insertAtMid(int val, int position)
     if (head == NULL) 
     {
         head = temp;
-        head->next = head; // Point to itself to make it circular
-        head->prev = head; // Previous pointer also points to itself
+        head->next = head; 
+        head->prev = head; 
         return;
     }
 
@@ -79,6 +79,7 @@ void deleteAtMid(int position)
     }
 
     struct node *current = head;
+
     for (int i = 1; i < position && current->next != head; i++) 
     {
         current = current->next;
@@ -170,3 +171,63 @@ int main()
 
     return 0;
 }
+
+
+/*
+
+1. Enter Element 
+2. Insert at Middle 
+3. Delete at Middle 
+4. Display 
+5. Exit 
+
+Enter your choice: 1
+Enter Element : 100
+
+Enter your choice: 1
+Enter Element : 200
+
+Enter your choice: 1
+Enter Element : 300
+
+Enter your choice: 1
+Enter Element : 400
+
+Enter your choice: 1
+Enter Element : 500
+
+Enter your choice: 4
+100     200     300     400     500
+
+Enter your choice: 2
+Enter data to insert at middle: 1001
+Enter position to insert: 3
+
+Enter your choice: 4
+100     200     1001    300     400     500
+
+Enter your choice: 2
+Enter data to insert at middle: 2002
+Enter position to insert: 5
+
+Enter your choice: 4
+100     200     1001    300     2002    400     500
+
+Enter your choice: 3
+Enter position to delete: 3
+Deleted node at position 3.
+
+Enter your choice: 4
+100     200     300     2002    400     500
+
+Enter your choice: 3
+Enter position to delete: 4
+Deleted node at position 4.
+
+Enter your choice: 4
+100     200     300     400     500
+
+Enter your choice: 5
+Exiting program.
+
+*/

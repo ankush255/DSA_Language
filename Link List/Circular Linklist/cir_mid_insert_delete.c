@@ -19,7 +19,7 @@ void insertEnd(int val)
     if(head == NULL) 
     {
         head = temp;
-        head->next = head; // Point to itself to make it circular
+        head->next = head; 
         return;
     }
 
@@ -28,7 +28,7 @@ void insertEnd(int val)
         ptr = ptr->next;
     }
     ptr->next = temp;
-    temp->next = head; // Make the last node point back to head to complete the circular linking
+    temp->next = head; 
 }
 
 void insertAtMid(int val, int position) 
@@ -39,7 +39,7 @@ void insertAtMid(int val, int position)
     if (head == NULL) 
     {
         head = temp;
-        head->next = head; // Point to itself to make it circular
+        head->next = head; 
         return;
     }
 
@@ -152,9 +152,69 @@ int main() {
                 break;
 
             default:
-                printf("Invalid choice. Please enter a valid option.\n");
+                printf("Invalid choice. Please Enter a valid option.\n");
         }
     } while(choice != 5);
 
     return 0;
 }
+
+
+/*
+
+1. Enter Element 
+2. Insert at Middle 
+3. Delete at Middle 
+4. Display 
+5. Exit 
+
+Enter your choice: 1
+Enter Element : 100
+
+Enter your choice: 1
+Enter Element : 200
+
+Enter your choice: 1
+Enter Element : 300
+
+Enter your choice: 1
+Enter Element : 400
+
+Enter your choice: 1
+Enter Element : 500
+
+Enter your choice: 4
+100     200     300     400     500
+
+Enter your choice: 2
+Enter data to insert at middle: 1001
+Enter position to insert: 3
+
+Enter your choice: 4
+100     200     1001    300     400     500
+
+Enter your choice: 2
+Enter data to insert at middle: 2002
+Enter position to insert: 5
+
+Enter your choice: 4
+100     200     1001    300     2002    400     500
+
+Enter your choice: 3
+Enter position to delete: 3
+Deleted node at position 3.
+
+Enter your choice: 4
+100     200     300     2002    400     500
+
+Enter your choice: 3
+Enter position to delete: 3
+Deleted node at position 3.
+
+Enter your choice: 4
+100     200     2002    400     500
+
+Enter your choice: 5
+Exiting program.
+
+*/

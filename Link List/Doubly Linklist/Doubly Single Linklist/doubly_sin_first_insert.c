@@ -4,7 +4,7 @@
 struct node {
     int data;
     struct node *next;
-    struct node *prev; // New member to store previous node
+    struct node *prev; 
 };
 
 struct node *head = NULL;
@@ -15,19 +15,19 @@ void insertFirst(int val)
     if (temp == NULL) 
     {
         printf("Memory allocation failed.\n");
-        exit(1);
+        return;
     }
 
     temp->data = val;
     temp->next = head;
-    temp->prev = NULL; // Set prev to NULL for the new node
+    temp->prev = NULL; 
 
     if (head != NULL)
     {
-        head->prev = temp; // Update previous pointer of the current head node
+        head->prev = temp; 
     }
 
-    head = temp; // Update head pointer to point to the new node
+    head = temp; 
 }
 
 void insertEnd(int val) 
@@ -37,7 +37,7 @@ void insertEnd(int val)
     if (temp == NULL) 
     {
         printf("Memory allocation failed.\n");
-        exit(1);
+        return;
     }
 
     temp->data = val;
@@ -68,14 +68,14 @@ void display()
         printf("List is Empty ...\n");
     } 
     else 
-    {
-        while (ptr != NULL) 
         {
-            printf("%d\t", ptr->data);
-            ptr = ptr->next;
+            while (ptr != NULL) 
+            {
+                printf("%d\t", ptr->data);
+                ptr = ptr->next;
+            }
+            printf("\n");
         }
-        printf("\n");
-    }
 }
 
 int main() 
@@ -99,20 +99,24 @@ int main()
                 printf("\n");
                 insertFirst(val);
                 break;
+
             case 2:
                 printf("Enter Element: ");
                 scanf("%d", &val);
                 printf("\n");
                 insertEnd(val);
                 break;
+
             case 3:
                 printf("Linked List: ");
                 display();
                 printf("\n");
                 break;
+
             case 4:
                 printf("Exiting...\n");
                 break;
+
             default:
                 printf("Invalid choice! Please enter again.\n");
         }
@@ -120,3 +124,38 @@ int main()
 
     return 0;
 }
+
+
+
+/*
+
+1. Insert First
+2. Insert Element
+3. Display
+4. Exit
+
+Enter your choice: 2
+Enter Element: 100
+
+Enter your choice: 2
+Enter Element: 200
+
+Enter your choice: 2
+Enter Element: 300
+
+Enter your choice: 2
+Enter Element: 400
+
+Enter your choice: 3
+Linked List: 100        200     300     400
+
+Enter your choice: 1
+Enter First Element : 800
+
+Enter your choice: 3
+Linked List: 800        100     200     300     400
+
+Enter your choice: 4
+Exiting...
+
+*/
